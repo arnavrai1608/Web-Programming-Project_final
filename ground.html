@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href = "groundStyle.css" rel = "stylesheet">
+</head>
+<body>
+
+    <section class="header">
+        <nav>
+            <div class="main-logo">
+                <a href="index.html">CricketWorld</a>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="rules.html">RULES</a></li>
+                    <li><a href="players.html">PLAYERS</a></li>
+                    <li><a href="ground.html">GROUNDS</a></li>
+                    <li><a href="Tournament.html">TOURNAMENTS</a></li>
+                    <li><a href="http://localhost:5173/quiz">QUIZ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section>
+        <div class="container">
+            <h2 class = "title">Famous Cricket Grounds</h2>
+            <div class="photo-gallery">
+                <div class="column">
+                    <div class="photo">
+                        <img src = "images/melbourneground.jpeg" alt = "melbourne" width = "300px" height = "250px">   
+                    </div>
+
+                    <div class="photo">
+                        <img src = "images/wankhede.jpg" alt = "melbourne"width = "300px" height = "250px">   
+                    </div>
+
+                    <div class="photo">
+                        <img src = "images/melbourneground.jpeg" alt = "melbourne">   
+                    </div>
+                    
+                </div>
+
+                <div class="column">
+                    <div class="photo">
+                        <img src = "images/melbourneground.jpeg" alt = "melbourne"width = "300px" height = "250px">   
+                    </div>
+
+                    <div class="photo">
+                        <img src = "images/wankhede.jpg" alt = "melbourne"width = "300px" height = "250px">   
+                    </div>
+
+                    <div class="photo">
+                        <img src = "images/melbourneground.jpeg" alt = "melbourne"width = "300px" height = "250px">   
+                    </div>
+                    
+                </div>
+
+                <div class="column">
+                    <div class="photo">
+                        <img src = "images/melbourneground.jpeg" alt = "melbourne"width = "300px" height = "250px">   
+                    </div>
+
+                    <div class="photo">
+                        <img src = "images/wankhede.jpg" alt = "melbourne"width = "300px" height = "250px">   
+                    </div>
+
+                    <div class="photo">
+                        <img src = "images/melbourneground.jpeg" alt = "melbourne"width = "300px" height = "250px">   
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+            document.querySelectorAll(".nav-links a").forEach(link => {
+                if (link.href === window.location.href) {
+                    link.style.color = "red"; 
+                }
+            });
+    </script>
+
+</body>
+</html>

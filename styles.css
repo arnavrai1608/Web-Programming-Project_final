@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color:rgba(31, 47, 37, 0.6);
+    overflow-x:hidden;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(10, 41, 0, 0.7)), url('images/CricketWorldbanner.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(14, 13, 13, 0.5);
+    
+}
+
+.main-logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.main-logo a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: whitesmoke;
+    font-weight:bold;
+}
+
+.nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: rgb(148, 40, 0);
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+    color: rgb(148, 40, 0);
+  
+}
+.main-box{
+
+    width:100%;
+    padding:50px;
+    margin-top:50px;
+}
+
+.text-box {
+    
+    width: 90%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+   
+}
+
+.text-box h3 {
+    font-size: 1em;
+    font-family: "Pacifico";
+    color: whitesmoke;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+}
+
+.content {
+    display:inline-block;
+    position:absolute;
+    top:23%;
+    left:10%;
+    margin-top: 5px;
+    size: 20em;
+}
+
+.title{
+    
+    color:whitesmoke;
+    font-size: 5em;
+    letter-spacing: 10px;
+    font-family: "Roboto";
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s steps(18);
+        cursor :none;
+}
+
+.title span{
+    color:rgb(146, 255, 173)
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.explore-btn{
+    position:absolute;
+    top:53%;
+    left:11%;
+}
+
+button {
+    position: relative;
+    top:50%;
+    padding: 1em 2em;
+    background-color: #161a20;
+    border: none;
+    color: #f0f0f0;
+    border-radius: 1000px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    width: 106%;
+    height: 106%;
+    border-radius: 1000px;
+    background: linear-gradient(to bottom right, rgb(118, 230, 146), rgb(227, 63, 63));
+    z-index: -1;
+    transform:scale(0);
+    transition: transform 0.3s ease-in-out;
+    z-index:-1;
+}
+
+button:hover {
+    color: black; /* Move the color change here */
+}
+
+button:hover::after {
+    transform:scale(1);
+}
+
+button a{
+    text-decoration:none;
+    color:white;
+    font-family:"Roboto";
+}
+
+/*-----about cricket------*/
+
+/*-----about cricket------*/
+
+.about-section {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.about-section h1 {
+    font-size: 36px;
+    font-family: "Anton";
+    letter-spacing: 2px;
+    color: rgb(148, 40, 0);
+}
+.about-section p{
+    color:whitesmoke;
+}
+
+.about-container p {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    font-family: 'Roboto';
+    align-items: center;
+}
+
+.container2{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-top:40px;
+}
+
+
+.about-container {
+
+    margin-top:40px;
+    background-color: rgb(146, 255, 173);
+    width: 50%;
+    padding: 50px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    border-radius: 10px;  /* Optional: For rounded corners */
+}
+
+/* Hover effect for the about-container */
+.about-container:hover {
+    transform: translateY(-10px); /* Moves the div up */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Creates shadow to enhance the lift effect */
+}
+
+/* This will apply flex on the image container */
+.images-container {
+    margin-left:20px;
+
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; /* Adds space between the images */
+    margin-top: 30px; /* Adjust spacing */
+}
+
+.cricket-image {
+   width:300px;
+   height:200px;
+    border-radius: 8px; /* Optional: For rounded corners */
+}
+
+.user-input {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .user-input form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .user-input label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .user-input input[type="text"],
+  .user-input input[type="password"],
+  .user-input textarea,
+  .user-input input[type = 'email']{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .user-input textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .user-input input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .user-input button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .user-input button:hover {
+    background-color: #0056b3;
+  }
+  

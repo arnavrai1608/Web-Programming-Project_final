@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>CricketWorld</title>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <div class="main-logo">
+                <a href="index.html">CricketWorld</a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="rules.html">RULES</a></li>
+                    <li><a href="players.html">PLAYERS</a></li>
+                    <li><a href="ground.html">GROUNDS</a></li>
+                    <li><a href="Tournament.html">TOURNAMENTS</a></li>
+                    <li><a href="http://localhost:5173/quiz">QUIZ</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="main-box">
+            <div class="text-box">
+                <h3>Explore the world of Cricket</h3>
+            </div>
+            <div class="content">
+                <h1 class="title">Welcome to <br><span>CricketWorld</span></h1>
+            </div>
+            <div class="explore-btn">
+                <button id="btn">Start Learning</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <h1>About Cricket</h1>
+        <p>Basic idea about CRICKET</p>
+        <div class="container2">
+            <div class="about-container">
+                <p>Cricket is a popular team sport played between two teams of eleven players each, with the objective of scoring more runs than the opposing team...</p>
+            </div>
+            <div class="images-container">
+                <img src="images/Cricket1.jpg" alt="Cricket Image 1" class="cricket-image">
+                <img src="images/Cricket2.jpg" alt="Cricket Image 2" class="cricket-image">
+            </div>
+        </div>
+    </section>
+
+    <h1 style="text-align: center;">User Details</h1>
+    <div class="user-input">
+        <form method="POST" id="form" action="#">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+            <div style="margin-top: 20px">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div style="margin-top: 20px">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" required placeholder="Enter your 10-digit phone number">
+            </div>
+            <div style="margin-top: 20px">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+            <div style="margin-top: 20px">
+                <label for="textarea">Feedback</label>
+                <textarea id="textarea" name="message" required placeholder="Enter your message"></textarea>
+            </div>
+            <h2>Do you play cricket?</h2>
+            <div style = "display: flex; flex-direction:row">
+                <label for="yes" style="margin-right: 10px; ">Yes</label>
+                <input type="radio" id="yes" name="feedback" value="yes" required style="margin-right: 40px;">
+                <label for="no" style="margin-right: 10px; ">No</label>
+                <input type="radio" id="no" name="feedback" value="no">
+            </div>
+            <button type="submit" style="width: 100%; margin-top: 20px;">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("btn").addEventListener("click", function() {
+                document.getElementById("form").scrollIntoView({ behavior: "smooth" });
+            });
+            
+            document.querySelectorAll(".nav-links a").forEach(link => {
+                if (link.href === window.location.href) {
+                    link.style.color = "red"; 
+                }
+            });
+
+            document.getElementById("form").addEventListener("submit", function(event) {
+                let email = document.getElementById("email").value;
+                let phone = document.getElementById("phone").value;
+                let password = document.getElementById("password").value;
+                
+                let emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+                let phoneRegex = /^[0-9]{10}$/;
+                let passwordRegex = /^.{8,}$/;
+                
+                if (!emailRegex.test(email)) {
+                    alert("Please enter a valid Gmail address.");
+                    event.preventDefault();
+                    return;
+                }
+                if (!phoneRegex.test(phone)) {
+                    alert("Phone number must be exactly 10 digits.");
+                    event.preventDefault();
+                    return;
+                }
+                if (!passwordRegex.test(password)) {
+                    alert("Password must be at least 8 characters long.");
+                    event.preventDefault();
+                    return;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color:rgba(0, 79, 14, 0.5);
+    
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(14, 13, 13, 0.5);
+}
+
+.main-logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.main-logo a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: rgb(148, 40, 0);
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+    color: rgb(148, 40, 0);
+}
+
+.gallery-indian{
+    display:inline-block;
+    border:1px solid rgb(101, 16, 16);
+    margin:5px;
+    background-color:whitesmoke;
+    margin-top:20px;
+    margin-left:20px;
+}
+
+.description{
+    padding:10px;
+    text-align:center;
+}
+
+.gallery-indian:hover{
+    border:3px solid rgb(163, 0, 0);
+    box-shadow: 5px 5px 10px rgba(136, 0, 0, 0.69);
+    color:rgb(95, 4, 4);
+}
+
+h1{
+    margin-top:50px;
+    text-align:center;
+    font-family:"Anton";
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:rgb(101, 16, 16);
+
+}
+
+.gallery-int{
+    display:inline-block;
+    border:1px solid rgb(101, 16, 16);
+    margin:5px;
+    background-color:whitesmoke;
+    margin-top:20px;
+    margin-left:20px;
+    margin-bottom:50px;
+}
+
+.gallery-int:hover{
+    border:3px solid rgb(163, 0, 0);
+    box-shadow: 5px 5px 10px rgba(136, 0, 0, 0.69);
+    color:rgb(95, 4, 4);
+}
+
+#featured-player {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(115, 0, 0, 0.9);
+}
+
+#featured-player h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    color: rgba(115, 0, 0, 0.9);
+    margin-bottom: 10px;
+}
+
+#featured-player img {
+    width: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#featured-player img:hover {
+    transform: scale(1.1);
+}
+
+#featured-player .description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 10px;
+}

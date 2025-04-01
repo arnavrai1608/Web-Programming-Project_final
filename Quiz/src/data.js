@@ -1,0 +1,42 @@
+export const data = [
+    {
+      question: "How many legal deliveries does a bowler bowl in an over (excluding wides and no-balls)?",
+      option1: "5",
+      option2: "6",
+      option3: "8",
+      option4: "10",
+      ans: 2,
+    },
+    {
+      question: "What happens if a bowler oversteps the crease while delivering the ball?",
+      option1: "Batsman is Out",
+      option2: "Umpire signals a wide",
+      option3: "It is called a no-ball",
+      option4: "The bowler is disqualified",
+      ans: 3,
+    },
+    {
+      question: "In Test cricket, how long is a team allowed to bat before a new ball can be taken?",
+      option1: "50 overs",
+      option2: "60 overs",
+      option3: "80 overs",
+      option4: "100 overs",
+      ans: 3,
+    },
+    {
+      question: "Which cricketer is known as The Wall due to his defensive batting style?",
+      option1: "MS Dhoni",
+      option2: "Virat Kohli",
+      option3: "Sachin Tendulkar",
+      option4: "Rahul Dravid",
+      ans: 4,
+    },
+    {
+      question: "Which country hosted the 2019 ICC Cricket World Cup?",
+      option1: "Australia",
+      option2: "England",
+      option3: "India",
+      option4: "South Africa",
+      ans: 2,
+    },
+  ];

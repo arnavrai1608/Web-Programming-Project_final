@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href = "rulesStyle.css" rel = "stylesheet">
+<title>CricketWorld - Rules</title>
+</head>
+<body>
+<section class="header">
+<nav>
+<div class="main-logo">
+<a href="index.html">CricketWorld</a>
+</div>
+
+<div class="nav-links">
+<ul>
+<li><a href="rules.html">RULES</a></li>
+<li><a href="players.html">PLAYERS</a></li>
+<li><a href="ground.html">GROUNDS</a></li>
+<li><a href="tournaments.html">TOURNAMENTS</a></li>
+<li><a href="http://localhost:5173/quiz">QUIZ</a></li>
+</ul>
+</div>
+</nav>
+</section>
+
+<section class = "rules-body">
+<div class = "ball">
+<div class="circle1"></div>
+
+</div>
+<div class="rules-para">
+<div class="curved-text">
+<svg width = "260" height = "130" >
+<path id = "curve" d = "M 0 120 C 0 120,130 0,260 120" stroke="rgb(99, 6, 6)" stroke-width="2" fill="transparent"></path>
+<text class = "rules-heading" text-anchor="middle">
+<textpath class = "text_path" href = "#curve" startOffset = "50%">RULES</textpath>
+</text>
+</svg>
+</div>
+<div class="rule-list">
+<ol>
+<li>Each team has 11 players, including a captain and wicketkeeper.</li>
+<li>The objective is to score more runs than the opposing team.</li>
+<li>An over consists of 6 legal deliveries by the bowler.</li>
+<li>A batsman can be dismissed by being bowled, caught, LBW, run-out, or stumped.</li>
+<li>Boundary rules: 4 runs for hitting the ball to the boundary on the ground, 6 runs if it clears the boundary.</li>
+<li>Powerplay restricts fielders outside the inner circle.</li>
+<li>No-ball and wide-ball penalties grant extra runs to the batting side.</li>
+<li>Free Hit is awarded after a no-ball, allowing the batsman to play without risk of dismissal (except run-out).</li>
+<li>The fielding team must appeal to the umpire for a dismissal decision.</li>
+<li>A tied match in limited-overs can be resolved using a Super Over.</li>
+</ol>
+</div>
+
+
+</div>
+
+
+</section>
+<script>
+
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+if (link.href === window.location.href) {
+link.style.color = "red"; // Change to any highlight color
+}
+});
+
+alert("You are reading the rules of cricket");
+document.querySelectorAll(".rule-list ol li").forEach(li => {
+li.addEventListener("mouseover", () => {
+
+li.style.fontWeight = "bold";
+});
+li.addEventListener("mouseout", () => {
+
+li.style.fontWeight = "";
+});
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Tournamentstyles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <title>Tournaments Page</title>
+</head>
+<body>
+  <nav>
+    <div class="main-logo">
+        <a href="index.html">CricketWorld</a>
+    </div>
+    <div class="nav-links">
+        <ul>
+            <li><a href = "index.html">HOME</a></li>
+            <li><a href="rules.html">RULES</a></li>
+            <li><a href="players.html">PLAYERS</a></li>
+            <li><a href="ground.html">GROUNDS</a></li>
+            <li><a href="Tournament.html">TOURNAMENTS</a></li>
+            <li><a href="http://localhost:5173/quiz">QUIZ</a></li>
+        </ul>
+    </div>
+</nav>
+
+  
+  <div class="filter-options">
+    <label style="color: rgb(132, 4, 4); font-weight: 600; font-size: larger;"><input type="radio" name="tournament-filter" value="indian" onclick="filterTournaments()"> Indian Tournaments</label>
+    <label style="color: rgb(132, 4, 4); font-weight: 600; font-size: larger;"><input type="radio" name="tournament-filter" value="western" onclick="filterTournaments()"> Western Tournaments</label>
+  </div>
+
+  <main class="tournament-container">
+    <div class="tournament-card" data-category="indian">
+      <h2>Champions League</h2>
+      <p>Date: March 10, 2025</p>
+      <p>Location: Mumbai, India</p>
+      <button>View Details</button>
+    </div>
+
+    <div class="tournament-card" data-category="western">
+      <h2>World Cup Finals</h2>
+      <p>Date: July 15, 2025</p>
+      <p>Location: London, UK</p>
+      <button>View Details</button>
+    </div>
+
+    <div class="tournament-card" data-category="indian">
+      <h2>Asia Premier League</h2>
+      <p>Date: September 20, 2025</p>
+      <p>Location: Delhi, India</p>
+      <button>View Details</button>
+    </div>
+
+    <div class="tournament-card" data-category="western">
+      <h2>Global Invitational</h2>
+      <p>Date: December 5, 2025</p>
+      <p>Location: New York, USA</p>
+      <button>View Details</button>
+    </div>
+
+    <div class="tournament-card" data-category="western">
+      <h2>National Series</h2>
+      <p>Date: January 15, 2026</p>
+      <p>Location: Sydney, Australia</p>
+      <button>View Details</button>
+    </div>
+  </main>
+
+  <script>
+    function filterTournaments() {
+      const selectedCategory = document.querySelector('input[name="tournament-filter"]:checked').value;
+      const tournaments = document.querySelectorAll('.tournament-card');
+      
+      tournaments.forEach(tournament => {
+        if (tournament.getAttribute('data-category') === selectedCategory) {
+          tournament.style.display = 'block';
+        } else {
+          tournament.style.display = 'none';
+        }
+      });
+    }
+
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+                if (link.href === window.location.href) {
+                    link.style.color = "red"; 
+                }
+            });
+
+
+  </script>
+</body>
+</html>

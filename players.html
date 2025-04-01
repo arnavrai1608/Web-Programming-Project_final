@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href = "playersStyle.css" rel = "stylesheet">
+    <title>CricketWorld-Players</title>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <div class="main-logo">
+                <a href="index.html">CricketWorld</a>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="rules.html">RULES</a></li>
+                    <li><a href="players.html">PLAYERS</a></li>
+                    <li><a href="ground.html">GROUNDS</a></li>
+                    <li><a href="Tournament.html">TOURNAMENTS</a></li>
+                    <li><a href="http://localhost:5173/quiz">QUIZ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section>
+        <h1>Indian Cricket Players</h1>
+        <div class="gallery-indian">
+            <img src = "images/VK.jpg" alt = "Virat Kohli" width = "194">
+            <div class = "description">Virat Kohli<br>Batsman</div>
+        </div>
+
+        <div class="gallery-indian">
+            <img src = "images/RS.jpg" alt = "Rohit Sharma" width = "200">
+            <div class = "description">Rohit Sharma<br>Batsman</div>
+        </div>
+
+        <div class="gallery-indian">
+            <img src = "images/Bumrah.jpg" alt = "Bumrah" width = "200">
+            <div class = "description">Jaspreet Bumrah<br>Bowler</div>
+        </div>
+
+
+        <h1>International Cricket Players</h1>
+        <div class="gallery-int">
+            <img src = "images/travis-head.png" alt = "Travis Head" width = "194">
+            <div class = "description">Travis Head<br>Batsman</div>
+        </div>
+
+        <div class="gallery-int">
+            <img src = "images/samcurran.jpeg" alt = "Rohit Sharma" width = "200">
+            <div class = "description">Sam Curran<br>Bowler</div>
+        </div>
+
+        <div class="gallery-int">
+            <img src = "images/RashidKhan.jpg" alt = "Rashid Khan" width = "200">
+            <div class = "description">Rashid Khan<br>Bowler</div>
+        </div>
+    </section>
+    <section id="featured-player"></section>
+
+    <script>
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            if (link.href === window.location.href) {
+                link.style.color = "red"; // Highlight active page
+            }
+        });
+
+        document.querySelectorAll(".gallery-indian img, .gallery-int img").forEach(image => {
+        image.addEventListener("mouseover", () => {
+        image.style.transform = "scale(1.2)";
+        image.style.transition = "transform 0.3s ease-in-out"; 
+        });
+
+            image.addEventListener("mouseout", () => {
+                image.style.transform = "scale(1)";
+                
+                let paragraph = image.nextElementSibling;
+                if (paragraph && paragraph.tagName === "P") {
+                    paragraph.remove();  // Remove the paragraph on mouseout
+                }
+            });
+        });
+        window.addEventListener("load", ()=>{
+            let players = document.querySelectorAll(".gallery-indian, .gallery-int ");
+            let randomPlayer = players[Math.floor(Math.random()*players.length)];
+            let featuredSection = document.getElementById("featured-player");
+            featuredSection.innerHTML = `<h2>Player Of the Day</h2>${randomPlayer.innerHTML}`;
+        })
+
+    </script>
+
+
+
+
+</body>
+</html>
